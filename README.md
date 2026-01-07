@@ -28,13 +28,51 @@ Sistema simples de gerenciamento de tarefas desenvolvido em Python para prática
 
 - Listas (armazenamento em memória)
 
-## 📦 Conceitos e Padrões
+## 🧠 Padrões de Projeto Utilizados
 
-Singleton -> 
-Gerenciador possui somente uma instância para controlar todas as tarefas
+Padrões de projeto são soluções já conhecidas para problemas comuns no desenvolvimento de software.  
+Neste projeto, eles foram utilizados para melhorar a organização do código e facilitar sua manutenção.
 
-Strategy -> 
-Status é representado por classes diferentes e pode ser trocado em tempo de execução
+Foram aplicados os seguintes padrões:
+
+---
+
+### 🔹 Strategy
+
+O padrão **Strategy** foi utilizado para representar os diferentes status de uma tarefa.
+
+Cada status do sistema foi modelado como uma classe diferente, todas derivadas de uma classe base chamada `Status`.  
+Os status disponíveis são: `Disponivel`, `Fazendo` e `Feita`.
+
+Dessa forma, o status de uma tarefa não é representado por uma string ou número, mas sim por um objeto.  
+Quando o usuário altera o status de uma tarefa, o sistema apenas troca o objeto de status associado a ela.
+
+Esse padrão foi escolhido porque:
+- Evita o uso excessivo de estruturas condicionais (`if/else`)
+- Facilita a adição de novos status no futuro
+- Torna o código mais organizado e legível
+
+**Arquivo relacionado:**  
+- `status/status.py`
+
+---
+
+### 🔹 Singleton
+
+O padrão **Singleton** foi utilizado para garantir que exista apenas um gerenciador de tarefas em toda a aplicação.
+
+A classe `GerenciadorTarefas` foi implementada de forma que apenas uma instância dela seja criada.  
+Essa instância é responsável por armazenar e gerenciar todas as tarefas do sistema.
+
+Sempre que o gerenciador é utilizado, o programa acessa essa mesma instância, garantindo que todas as partes do sistema trabalhem com a mesma lista de tarefas.
+
+Esse padrão foi escolhido porque:
+- Evita a criação de múltiplas listas de tarefas
+- Mantém o estado do sistema consistente
+- Centraliza o controle das tarefas
+
+**Arquivo relacionado:**  
+- `services/gerenciador.py`
 
 ## Separação por camadas:
 
