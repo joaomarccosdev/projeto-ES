@@ -1,10 +1,8 @@
-## 📝 Lista de Tarefas (Python)
+## Lista de Tarefas (Python)
 
-Este projeto consiste em um sistema simples de **gerenciamento de tarefas**, desenvolvido em Python, com o objetivo de praticar os conceitos de **Programação Orientada a Objetos** e a aplicação de **padrões de projeto**, conforme proposto na Atividade 3 da disciplina de Engenharia de Software.
+Este projeto consiste em um sistema simples de gerenciamento de tarefas, foi desenvolvido em Python, com o objetivo de praticar os conceitos e aplicação de padrões de projeto com  Programação Orientada a Objetos, conforme proposto na Atividade 3 da disciplina de Engenharia de Software.
 
----
-
-## 📋 Funcionalidades
+## Funcionalidades
 
 O sistema oferece as seguintes funcionalidades:
 
@@ -18,29 +16,23 @@ Os status disponíveis para as tarefas são:
 - Fazendo
 - Feita
 
----
-
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Python 3
 - Programação Orientada a Objetos (POO)
 - Estruturas de controle
 - Listas para armazenamento em memória
 
----
+## Padrões de Projeto Utilizados
 
-## 🧠 Padrões de Projeto Utilizados
-
-Padrões de projeto são soluções consolidadas para problemas recorrentes no desenvolvimento de software.  
+Os Padrões de projeto são soluções consolidadas para problemas recorrentes no desenvolvimento de software.  
 Neste projeto, eles foram utilizados com o objetivo de melhorar a organização do código, facilitar a manutenção e tornar a solução mais flexível.
 
 Foram aplicados os seguintes padrões de projeto:
 
----
+### Strategy
 
-### 🔹 Strategy
-
-O padrão **Strategy** foi utilizado para representar os diferentes status de uma tarefa.
+O padrão Strategy foi utilizado para representar os diferentes status de uma tarefa.
 
 Cada status do sistema foi modelado como uma classe distinta, todas derivadas de uma classe base chamada `Status`.  
 Os status implementados são: `Disponivel`, `Fazendo` e `Feita`.
@@ -53,14 +45,12 @@ Esse padrão foi escolhido porque:
 - Facilita a adição de novos status
 - Torna o código mais organizado e extensível
 
-**Arquivo relacionado:**  
-- `status/status.py`
+Arquivo relacionado: 
+ `status/status.py`
 
----
+### Singleton
 
-### 🔹 Singleton
-
-O padrão **Singleton** foi utilizado para garantir que exista apenas um gerenciador de tarefas em toda a aplicação.
+O padrão Singleton foi utilizado para garantir que exista apenas um gerenciador de tarefas em toda a aplicação.
 
 A classe `GerenciadorTarefas` foi implementada de forma que apenas uma instância dessa classe seja criada durante a execução do programa.  
 Essa instância é responsável por armazenar e gerenciar todas as tarefas do sistema.
@@ -75,9 +65,7 @@ Esse padrão foi escolhido porque:
 **Arquivo relacionado:**  
 - `services/gerenciador.py`
 
----
-
-## 📂 Separação por Camadas
+## Separação por Camadas
 
 O projeto foi organizado em camadas para melhorar a estrutura e facilitar o entendimento do código:
 
@@ -86,9 +74,7 @@ O projeto foi organizado em camadas para melhorar a estrutura e facilitar o ente
 - `services` → contém o gerenciador de tarefas
 - `main.py` → responsável pela interface com o usuário via terminal
 
----
-
-## ▶️ Como Executar o Projeto
+## Como Executar o Projeto
 
 Para executar o projeto, siga os passos abaixo:
 
