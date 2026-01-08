@@ -15,4 +15,4 @@ class Fazendo(Status):
 
 class Feita(Status):
     def nome(self):
-        return "Concluído"
+        return "Feita"

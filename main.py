@@ -31,7 +31,7 @@ def listar_tarefas(gerenciador):
     tarefas = gerenciador.listar()
     if not tarefas:
         print("Nenhuma tarefa foi cadastrada ainda.")
-        return
+        return main ()
 
     for i, tarefa in enumerate(tarefas):
         print(f"{i} - {tarefa}")
