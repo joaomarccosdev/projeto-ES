@@ -25,12 +25,12 @@ def adicionar_tarefa(gerenciador):
     descricao = input("Descrição: ").strip()
     tarefa = Tarefa(nome, descricao, Disponivel())
     gerenciador.adicionar(tarefa)
-    print("Tarefa adicionada com sucesso.")
+    print("A Tarefa adicionada com êxito.")
 
 def listar_tarefas(gerenciador):
     tarefas = gerenciador.listar()
     if not tarefas:
-        print("Nenhuma tarefa cadastrada.")
+        print("Nenhuma tarefa foi cadastrada ainda.")
         return
 
     for i, tarefa in enumerate(tarefas):
@@ -41,15 +41,15 @@ def remover_tarefa(gerenciador):
     try:
         indice = int(input("Índice da tarefa a remover: "))
         gerenciador.remover(indice)
-        print("Tarefa removida.")
+        print("Tarefa removida da lista.")
     except (ValueError, IndexError):
-        print("Índice inválido.")
+        print("Índice inválido. Repita a operação")
 
 def alterar_status(gerenciador):
     listar_tarefas(gerenciador)
     try:
         indice = int(input("Índice da tarefa: "))
-        print("1 - Disponível | 2 - Fazendo | 3 - Feita")
+        print("\n1 - Disponível \n2 - Fazendo \n3 - Feita")
         opcao = input("Novo status: ").strip()
 
         status_cls = STATUS_OPTIONS.get(opcao)
