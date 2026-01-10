@@ -2,7 +2,7 @@
 
 from services.gerenciador import GerenciadorTarefas
 from status.factory import StatusFactory
-from interface.interface_usuario import InterfaceUsuario
+from interface.interface import InterfaceUsuario
 
 
 def main():
