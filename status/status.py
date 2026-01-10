@@ -1,18 +1,22 @@
-class Status:
-    def nome(self):
-        pass
-
-
-class Disponivel(Status):
+class StatusDisponivel:
     def nome(self):
         return "Disponível"
+    
+    def cor(self):
+        return "AZUL"
 
 
-class Fazendo(Status):
+class StatusFazendo:
     def nome(self):
         return "Fazendo"
+    
+    def cor(self):
+        return "AMARELO"
 
 
-class Feita(Status):
+class StatusFeita:
     def nome(self):
         return "Feita"
+    
+    def cor(self):
+        return "VERDE"
