@@ -1,3 +1,5 @@
+from models.tarefa import Tarefa
+
 class InterfaceUsuario:
     def __init__(self, gerenciador, estrategia):
         self.__gerenciador = gerenciador
